@@ -1,4 +1,4 @@
-name: Docker Image CI
+hname: Docker Image CI
 
 on:
   push:
@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build -t saaal .
     - name: Push to Dockerhub
-      run: docker push sulubay/saaal:latest
+      run: docker push sulubayhhhh/saaal:latest
