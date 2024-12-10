@@ -22,5 +22,5 @@ jobs:
       
     - name: Build the Docker image
       run: docker build -t saaal .
-    -name: Push to Dockerhub
-      run: docker push sulubayhhhh/saaal:latest
+    - name: Push to Dockerhub
+      run: docker push sulubay/saaal:latest
