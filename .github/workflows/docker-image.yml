@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+ 
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Login Dockerhub
+      env:
+      DOCKERUSERNAME: ${{secrets.DOCKERUSERNAME}}
+      DOCKERPASSWORD: ${{secrets.DOCKERPASSWORD}}
+      run: docker login -u $DOCKERUSERNAME -p $DOCKERPASSWORD
+      
+      
+    - name: Build the Docker image
+      run: docker build -t saaal .
+    -name: Push to Dockerhub
+      run: docker push sulubayhhhh/saaal:latest
